@@ -1,0 +1,27 @@
+{
+  "name": "playwright_study",
+  "version": "1.0.0",
+  "description": "Automated software testing",
+  "main": "index.js",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=chromium --headed --reporter=list",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=firefox --reporter=list",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=webkit --reporter=list",
+    "tests:e2e": "playwright test --config=e2e.config.ts --project=chromium --reporter=list",
+    "tests:visual:chrome": "playwright test --config=visual_config.ts --project=chromium --reporter=list",
+    "tests:visual:firefox": "playwright test --config=visual_config.ts --project=firefox --reporter=list",
+    "tests:visual:webkit": "playwright test --config=visual_config.ts --project=webkit --reporter=list",
+    "tests:visual:chrome:update": "playwright test --config=visual_config.ts --project=chromium --update-snapshots --reporter=list",
+    "tests:visual:firefox:update": "playwright test --config=visual_config.ts --project=firefox --update-snapshots --reporter=list",
+    "tests:visual:webkit:update": "playwright test --config=visual_config.ts --project=webkit --update-snapshots --reporter=list",
+    "tests:api": "playwright test --config=api.config.ts --project=chromium --reporter=list",
+    "format": "npx prettier --write .",
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.37.0",
+    "prettier": "^3.0.1"
+  }
+}
